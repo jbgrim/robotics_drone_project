@@ -13,3 +13,4 @@
 [submodule "src/drone_flock_controler"]
 	path = src/drone_flock_controler
 	url = git@github.com:jbgrim/drone_flock_controler.git
+	branch = main
