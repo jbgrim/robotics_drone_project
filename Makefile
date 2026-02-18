@@ -13,4 +13,4 @@ setup:
 .PHONY: launch
 
 launch:
-	ros2 launch drone_flock_controler simple_mission.launch.xml
+	source install/setup.bash && ros2 launch drone_flock_controler simple_mission.launch.xml
