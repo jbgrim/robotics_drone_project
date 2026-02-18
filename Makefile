@@ -1,7 +1,7 @@
 .PHONY: build
 
 build:
-	colcon build
+	colcon build --symlink-install --packages-ignore px4
 	cd src/PX4-Autopilot && make px4_sitl
 
 .PHONY: setup
@@ -18,4 +18,4 @@ setup:
 .PHONY: launch
 
 launch:
-	source install/setup.bash && ros2 launch drone_flock_controler simple_mission.launch.xml
+	ros2 launch drone_flock_controler simple_mission.launch.xml

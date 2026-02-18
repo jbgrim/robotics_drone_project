@@ -12,5 +12,6 @@ make build
 Then launch:
 
 ```
+source install/setup.bash
 make launch
 ```
