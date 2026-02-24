@@ -5,12 +5,15 @@
 [submodule "src/px4_msgs"]
 	path = src/px4_msgs
 	url = https://github.com/PX4/px4_msgs.git
-	branch = release/1.16
+	branch = main
 [submodule "src/PX4-Autopilot"]
 	path = src/PX4-Autopilot
 	url = https://github.com/PX4/PX4-Autopilot.git
-	branch = release/1.16
+	branch = main
 [submodule "src/drone_flock_controler"]
 	path = src/drone_flock_controler
 	url = git@github.com:jbgrim/drone_flock_controler.git
 	branch = main
+[submodule "src/drone_flock_controler_interfaces"]
+	path = src/drone_flock_controler_interfaces
+	url = git@github.com:jbgrim/drone_flock_controler_interfaces.git
