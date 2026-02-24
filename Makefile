@@ -14,6 +14,8 @@ setup:
 	chmod +x QGroundControl-x86_64.AppImage
 	git submodule update --init
 	cd src/PX4-Autopilot && make submodulesclean && ./Tools/setup/ubuntu.sh
+	# Remove the hard-coded depth camera topic from the OakD-Lite model in order to spawn multiple instances of the drone without topic name conflicts
+	sed -i '/<topic>depth_camera<\/topic>/d' src/PX4-Autopilot/Tools/simulation/gz/models/OakD-Lite/model.sdf
 
 .PHONY: launch
 
