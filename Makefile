@@ -10,7 +10,9 @@ setup:
 	sudo apt install gstreamer1.0-plugins-bad gstreamer1.0-libav gstreamer1.0-gl -y
 	sudo apt install libfuse2 -y
 	sudo apt install libxcb-xinerama0 libxkbcommon-x11-0 libxcb-cursor-dev -y
-	curl https://d176tv9ibo4jno.cloudfront.net/latest/QGroundControl-x86_64.AppImage --output QGroundControl-x86_64.AppImage
+	sudo apt install python3-gi python3-gst-1.0 -y
+	cd /tmp && wget https://github.com/mavlink/MAVSDK/releases/download/v3.0.0/libmavsdk-dev_3.0.0_ubuntu24.04_amd64.deb && sudo dpkg -i libmavsdk-dev_3.0.0_ubuntu24.04_amd64.deb
+	wget https://d176tv9ibo4jno.cloudfront.net/latest/QGroundControl-x86_64.AppImage
 	chmod +x QGroundControl-x86_64.AppImage
 	git submodule update --init
 	cd src/PX4-Autopilot && make submodulesclean && ./Tools/setup/ubuntu.sh
